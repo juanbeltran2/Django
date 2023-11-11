@@ -1,0 +1,48 @@
+<!-- Heredo o extiendo el layout (pagina principal) -->
+{% extends 'layout.html' %}
+
+{% block title %} Página de pruebas {% endblock %}
+
+{% block content %}
+
+    <h1 class="tittle" >Página de mi web</h1>
+    
+    <p>{{ "Creado por Juan Sensaciñon"|cut:"ñ" }} </p>
+
+    <p>
+        {{ textoVacio|default:"No hay nada" }}
+    </p>
+
+    <p>
+        {{ lista|first }}
+    </p>
+
+    <p>
+        {{ lista|last }}
+    </p>
+    <p>
+        {{ lista|join:", " }}
+    </p>
+    <p>
+        {{ lista|length }}
+    </p>
+    <p>
+        {{ textoPrueba|upper }}
+    </p>
+    <p>
+        {{ textoPrueba|lower }}
+    </p>
+
+    <!-- Se cargan los filtos personalizados creados en E:\Cursos\Django\aprendiendoDjango\miapp\templatetags\filters.py -->
+    {% load filters %}  
+    <p>
+        {{ "Filtro creado de saludo"|saludo|safe }}
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+
+{% endblock %}

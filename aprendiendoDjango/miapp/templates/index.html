@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %} {{tittle}} {% endblock %}
+
+{% comment "Este comentario" %}
+    <h1>no se ve en el html </h1>
+{% endcomment %}
+
+{% block content %}
+
+    <h1 class="tittle">{{tittle}}</h1>
+
+    {{mi_variable}}
+
+    {% if nombre and nombre == 'Jeremy' %}
+        <p> {{nombre}}  </p>
+    {% else %}
+        <strong> No existe </strong>
+    {% endif %}
+
+    <h3> Listado de lenguajes </h3>
+
+    <!-- forloop -> Funciones adicionales que tiene el for del django -->
+
+    <ul>
+        {% for lenguaje in lenguajes %}
+            <li> {{forloop.counter0}}. {{lenguaje}} </li>
+        {% empty %}
+            <p>No hay lenguajes </p>
+        {% endfor %}
+    </ul>
+
+    {% comment %} Traer informacion de otra plantilla que tiene heredado lo que estoy recibiendo desde la vista {% endcomment %}
+    {% include 'fecha_actual.html' with saludo="Bienvenido" %}
+
+{% endblock %}

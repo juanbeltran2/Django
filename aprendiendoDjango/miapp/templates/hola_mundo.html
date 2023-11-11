@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block title %} Hola-mundo {% endblock %}
+
+{% block content %}
+
+    {{ block.super }} <!-- Permite dejar la informacion original que tiene el layout -->
+    <h1 class="tittle">Hola Mundo con Django</h1>
+    <h3>Esta es mi primer pagina</h3>
+
+{% endblock %}

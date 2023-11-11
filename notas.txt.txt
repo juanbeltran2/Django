@@ -1,0 +1,30 @@
+Instalar Django:
+
+C:\Users\Juan>pip install Django==4.2.3   # => Version que aparece en la pagina de Django https://www.djangoproject.com/download/
+
+Crear Proyecto:
+
+1. Ubicarse en el directorio en donde se va a crear
+2. Digitar por consola: E:\Cursos\Django> django-admin startproject aprendiendoDjango 
+3. Alistar el proyecto recien creado: E:\Cursos\Django\aprendiendoDjango> python manage.py migrate
+4. Lanzar el proyecto: python manage.py runserver
+
+Ejecutar proyecto
+ python .\manage.py runserver
+
+Crear app dentro de nuestro proyecto
+
+1. Ubicarse dentro del proyecto E:\Cursos\Django\aprendiendoDjango> 
+2. python manage.py startapp miapp
+
+
+Crear vistas
+
+1. Se edita el archivo E:\Cursos\Django\aprendiendoDjango\miapp\views.py
+
+Crear carpeta de templates 
+1. crear los archivos html
+2. Adicionar el proyecto en el archivo de settings
+3. renderizar en las views a las páginas del html
+4. Crear la pagina de layout la cual es la base para los otros templates
+4. En cada templates se debe extender el layout 
