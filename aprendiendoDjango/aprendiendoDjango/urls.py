@@ -29,5 +29,10 @@ urlpatterns = [
     path('pagina-pruebas/<int:redirigir>', views.pagina, name="paginas"),  # redirigir a otra pagina
     path('contacto/', views.contacto, name="Contacto"),         # Envio de parametros por url
     path('contacto/<str:nombre>/', views.contacto, name="Contacto"), 
-    path('contacto/<str:nombre>/<str:apellidos>', views.contacto, name="Contacto"), 
+    path('contacto/<str:nombre>/<str:apellidos>', views.contacto, name="Contacto"),
+    path('crear-articulo/<str:title>/<str:content>/<str:public>', views.crear_articulo, name="crear_articulo"),
+    path('articulo/', views.consultar_articulo, name="articulo" ),
+    path('editar-articulo/<int:id>', views.editar_articulo, name="editar_articulo"),
+    path('articulos/', views.consultar_articulos, name="articulos"),
+    path('borrar-articulo/<int:id>', views.borrar_articulo, name="borrar"),
 ]

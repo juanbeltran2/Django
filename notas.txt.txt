@@ -1,3 +1,8 @@
+GIT:
+
+Personal: juanbeltran2
+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
+
 Instalar Django:
 
 C:\Users\Juan>pip install Django==4.2.3   # => Version que aparece en la pagina de Django https://www.djangoproject.com/download/
@@ -28,3 +33,14 @@ Crear carpeta de templates
 3. renderizar en las views a las páginas del html
 4. Crear la pagina de layout la cual es la base para los otros templates
 4. En cada templates se debe extender el layout 
+
+2. instalar pip install plint-django para ayuda en la escritura (no es necesario)
+
+3. Manejo de BD:
+
+    1. Crear las tablas en el archivo de models del proyecto
+    2. Verificar en settings del proyecto que mi proyecto este en la lista de INSTALLED_APPS, de lo contrario, se debe agregar
+    #### estas modificaciones es tanto para crear como para actualizar
+    3. Crear la migracion: Desde la raiz del proyecto, ejecutar python manage.py makemigrations 
+    4. Crear la estrucura sql: Desde la raiz del proyecto, ejecutar python manage.py sqlmigrate miapp 0001  # (miapp: es el nombre del proyecto, 0001, es el numer de la cracion creada en el paso anterior )
+    5. Crear la tabla: python manage.py migrate
