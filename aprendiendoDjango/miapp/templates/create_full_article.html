@@ -1,0 +1,22 @@
+<!-- Heredo o extiendo el layout (pagina principal) -->
+{% extends 'layout.html' %}
+
+{% block title %} Formularios en Django {% endblock %}
+
+{% block content %}
+
+    <h1 class="tittle" >Formularios en Django</h1>
+
+    <form action="" method="POST">
+
+        <!-- Se requiere esta linea cuando se va a enviar informacion por el metodo POST -->
+        {% csrf_token %}
+
+        {{ form.as_p }}  <!-- as_ul => hace que cada campo creado este dentro de una etiqueta, si quisieramos parrafos seria as_p -->
+
+        <input type="submit" value="Guardar" />
+
+    </form>
+    
+    
+{% endblock %}
