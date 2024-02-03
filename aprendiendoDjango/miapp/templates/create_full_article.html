@@ -5,7 +5,13 @@
 
 {% block content %}
 
-    <h1 class="tittle" >Formularios en Django</h1>
+    <h1 class="tittles" >Formularios en Django</h1>
+
+    {% if form.errors %}
+        <strong class="stylerojo">
+            Hay errores en el formulario
+        </strong>
+    {% endif %}
 
     <form action="" method="POST">
 

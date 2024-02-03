@@ -44,3 +44,46 @@ Crear carpeta de templates
     3. Crear la migracion: Desde la raiz del proyecto, ejecutar python manage.py makemigrations 
     4. Crear la estrucura sql: Desde la raiz del proyecto, ejecutar python manage.py sqlmigrate miapp 0001  # (miapp: es el nombre del proyecto, 0001, es el numer de la cracion creada en el paso anterior )
     5. Crear la tabla: python manage.py migrate
+
+
+
+############### Migracion ################################
+python manage.py makemigrations         ===> Creamos la tarea de migracion
+python manage.py sqlmigrate pages 0001  ===> Indicamos la migracion que vamos a realizar
+python manage.py migrate                ===> Ejecutamos la migracion
+
+
+
+############## Crear usuario para el panel de adeministracion de django (http://127.0.0.1:8000/admin) 
+
+Desde la consola escribir y diligenciar los datos (yo deje usuario: Juan pass: Juan)
+E:\Cursos\Django\aprendiendoDjango>python manage.py createsuperuser
+
+Se puede modificar esta vita del admin editando el scrip E:\Cursos\Django\aprendiendoDjango\miapp\admin.py
+
+############ Imagenes ###################### 
+
+1. MOdificar el archivo settings de la aplicacion para establecer la ruta en donde quedaran las imagenes (MEDIA_URL y MEDIA_ROOT)
+2. Modificamos en la tabla las caracteristicas de la columna de la imagenes (upload_to)
+3. Intalamos la libreria de Pillow (pip install Pillow) 
+4. En el archivo de E:\Cursos\Django\aprendiendoDjango\aprendiendoDjango\urls.py modificamos para que permita mostrar las imagenes
+
+######## Crear un nuevo proyecto ##############
+
+1. Ir a la carpeta raiz y Digitar por consola: E:\Cursos\Django> django-admin startproject ProyectoDjango
+2. Ingresamos al proyecto y en settings mofidicamos el idioma en LANGUAGE_CODE
+3. Corremos el manage.py para confirmar que el proyecto inicie
+4. Creamos la primer app la cual nos ultilizaremos como la base (\ProyectoDjango>python manage.py startapp mainapp)
+5. Adicionamos la nueva app en el settings principal en INSTALLED_APPS de ProyectoDjango\ProyectoDjango\settings.py
+6. Empezamos creando el index de la vista ProyectoDjango\mainapp\views.py
+7. Creamos la carpeta de templates y los folders adicionales que sean necesitaremos para identificar cada aplicacion
+8. Creamos el archivo .html dentro de la carpeta de templates que se reendizara cuando se ingrese al index
+9. Importamos la aplicacion y configuramos las urls en ProyectoDjango\ProyectoDjango\urls.py
+10. Creamos la carpeta de static/css y el archivo de estilos
+11. Creamos el template de layout
+12. Heredamos el layout en los template de .html
+13. Creamos una nueva app para manejar la paginacion (ProyectoDjango>python manage.py startapp pages)
+14. Incluimos la nueva app en INSTALLED_APPS
+15. Creamos el modelo en ProyectoDjango\pages\models.py
+16. HAcemos la migracion para que se creen las tablas (pasos de la migracion, en el archivo de models)
+

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} {% endblock %}
+        | Juan
+    </title>
+
+
+    <!-- Se carga la carpeta de estaticos -->
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+
+</head>
+
+<body>
+    <!-- Cabecera de la pagina -->
+    <header>
+        <div id="logotipo">
+            <!-- Logotipo -->
+            <img src="{% static 'img/logo.png' %}" />
+            <h1>Proyecto con Django </h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'index' %}">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}">Nosotros</a>
+            </li>            
+        </ul>
+    </nav>
+
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+    <div id="content">
+
+        <div class="box">            
+            {% block content %}
+                <!-- Codigo que viene del template -->
+                <strong> Informacion original en la plantilla </strong>
+            {% endblock %}
+        </div>        
+    </div>
+
+    <footer>
+        este es el footer - {% now "d/m/Y h:m:s" %}
+    </footer>
+
+</body>
+
+</html>

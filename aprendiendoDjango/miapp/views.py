@@ -10,6 +10,9 @@ from django.db.models import Q
 # Se llaman los metodos de creacion de formularios que se crearon en el script de forms.py
 from miapp.forms import FormArticle
 
+# Libreria para mensajes flash (sesion que se muestra 1 vez)
+from django.contrib import messages
+
 # Creo una la funcion, la cual sera llamada desde E:\Cursos\Django\aprendiendoDjango\aprendiendoDjango\urls.py
 # Menu que se mostrara en todas las paginas
 layout  =   """
@@ -106,7 +109,9 @@ def editar_articulo( request, id ):
 def consultar_articulos( request ):
 
     # Consultamos la BD para traer un todos los articulos
-    articulos   =   article.objects.all().order_by('-id')  # Ordernr de forma descendente
+    #articulos   =   article.objects.all().order_by('-id')  # traer todos los articulos y Orderar de forma descendente
+    articulos   =   article.objects.filter( public=True ).order_by('-id')  # traer todos los articulos y Orderar de forma descendente
+
     # articulos   =   article.objects.order_by('id')
 
     # Filtros
@@ -207,6 +212,9 @@ def create_full_article( request ):
 
             # Almacenamos el registro
             articulo.save()
+
+            # creo el mensaje flash
+            messages.success( request, 'Articulo creado {0}'.format(articulo.id) )
 
             # return HttpResponse(title + ' ' + content + ' ' + str(public) )
             return redirect('articulos')
