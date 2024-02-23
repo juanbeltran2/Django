@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'mainapp',
     #'pages' # Esta es la configuracion inicial pero se modifica en la siguiente linea para que se vea mejor en el panel de administracion de Django  
-    'pages.apps.PagesConfig'   # Se trae la configuracion que esa en apps para que se vea desde el panel de administracion de Django
+    'pages.apps.PagesConfig',   # Se trae la configuracion que esa en apps para que se vea desde el panel de administracion de Django
+    'blog', # Adiciono la app de blog
 ]
 
 MIDDLEWARE = [

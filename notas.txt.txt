@@ -101,4 +101,18 @@ Se puede modificar esta vista del admin editando el scrip E:\Cursos\Django\apren
 29. Adicionamos la nueva libreria en las INSTALLED_APPS de ProyectoDjango\ProyectoDjango\settings.py
 30. Importamos la libreria en ProyectoDjango\pages\models.py y cambiamos la columna que necesitamos
 31. Se puede configurar el ckeditor en CKEDITOR_CONFIGS del ProyectoDjango\ProyectoDjango\settings.py
-32. 
+
+######### Crear app de blog ###############
+
+1. Crer la app: E:\Cursos\Django\ProyectoDjango>python manage.py startapp blog
+2. Adiconarla en las INSTALLED_APPS de setings => ProyectoDjango\ProyectoDjango\settings.py
+3. crear los modelos con relaciones en ProyectoDjango\blog\models.py
+4. Se realiza la migracion
+5. Cargo los modelos para que se vean en el panel del dashboard ProyectoDjango\blog\admin.py
+6. Empiezo a modificar las vistas en ProyectoDjango\blog\views.py
+7. Creo el directorio de templates y sus sub diretorios en ProyectoDjango\blog\templates
+8. Creo los html de los directorios
+9. Creo y configuro el fichero ProyectoDjango\blog\urls.py
+10. Cargo la url en el fichero principal ProyectoDjango\ProyectoDjango\urls.py
+11. Modifico el template nuevo ProyectoDjango\blog\templates\articles\list.html
+12. 
