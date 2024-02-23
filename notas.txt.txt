@@ -59,7 +59,7 @@ python manage.py migrate                ===> Ejecutamos la migracion
 Desde la consola escribir y diligenciar los datos (yo deje usuario: Juan pass: Juan)
 E:\Cursos\Django\aprendiendoDjango>python manage.py createsuperuser
 
-Se puede modificar esta vita del admin editando el scrip E:\Cursos\Django\aprendiendoDjango\miapp\admin.py
+Se puede modificar esta vista del admin editando el scrip E:\Cursos\Django\aprendiendoDjango\miapp\admin.py y ProyectoDjango\pages\apps.py
 
 ############ Imagenes ###################### 
 
@@ -85,5 +85,20 @@ Se puede modificar esta vita del admin editando el scrip E:\Cursos\Django\aprend
 13. Creamos una nueva app para manejar la paginacion (ProyectoDjango>python manage.py startapp pages)
 14. Incluimos la nueva app en INSTALLED_APPS
 15. Creamos el modelo en ProyectoDjango\pages\models.py
-16. HAcemos la migracion para que se creen las tablas (pasos de la migracion, en el archivo de models)
-
+16. Hacemos la migracion para que se creen las tablas (pasos de la migracion, en el archivo de models)
+17. Creamos el usuario para el panel de administracion de Django
+18. configuramos admin.py, apps.py y settings.py (TEMPLATES) para poder que la página se puede haer visible desde el panel de administrador de Django
+19. Creamos 3 paginas desde el panel de administracion (es hacer un insert a la tabla)
+20. creamos el script context_processors.py ( el context_processors son instrucciones que se cargan en todas las plantillas del proyecto )
+21. Modificamos el archivo context_processors.py con la informacion que queremos que sea global en los templates
+22. Lo configuramos en E:\Cursos\Django\ProyectoDjango\ProyectoDjango\settings.py TEMPLATES
+23. Cargamos las paginas consultadas desde el context en el menu del layout E:\Cursos\Django\ProyectoDjango\mainapp\templates\layouts\layout.html
+24. Modificamos el archov ProyectoDjango\pages\views.py con la ruta
+25. Creamos la nueva pagina de html E:\Cursos\Django\ProyectoDjango\pages\templates\pages\page.html
+26. Adicionamos la ruta E:\Cursos\Django\ProyectoDjango\ProyectoDjango\urls.py
+27. Optimizar las url, en cada app se crea el fichero urls.py y se colocan las rutas que estaban en E:\Cursos\Django\ProyectoDjango\ProyectoDjango\urls.py
+28. Instalamos el paquete de editor de texto enriquecido pip install django-ckeditor (pagina de documentacion https://django-ckeditor.readthedocs.io/en/latest/) y https://ckeditor.com/docs/ckeditor4/latest/features/toolbar.html
+29. Adicionamos la nueva libreria en las INSTALLED_APPS de ProyectoDjango\ProyectoDjango\settings.py
+30. Importamos la libreria en ProyectoDjango\pages\models.py y cambiamos la columna que necesitamos
+31. Se puede configurar el ckeditor en CKEDITOR_CONFIGS del ProyectoDjango\ProyectoDjango\settings.py
+32. 

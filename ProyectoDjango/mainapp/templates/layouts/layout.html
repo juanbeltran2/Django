@@ -33,9 +33,12 @@
             <li>
                 <a href="{% url 'index' %}">Inicio</a>
             </li>
-            <li>
-                <a href="{% url 'about' %}">Nosotros</a>
-            </li>            
+            <!-- Recorremos las paginas cargadas desde E:\Cursos\Django\ProyectoDjango\pages\context_processors.py  -->
+            {% for page in pages %}
+                <li>
+                    <a href="{% url 'page' page.2 %}">{{ page.1 }}</a>
+                </li>     
+            {% endfor %}       
         </ul>
     </nav>
 
