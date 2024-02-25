@@ -11,7 +11,7 @@
     <span> {{ page.create_at }} </span>
 
     <p>
-        {{ page.content }}
+        {{ page.content|safe }}
     </p>
 
 {% endblock %}

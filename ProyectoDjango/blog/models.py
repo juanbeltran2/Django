@@ -20,7 +20,7 @@ class Article( models.Model ):
 
     title       =   models.CharField( max_length=150, verbose_name='Titulo' )
     content     =   RichTextField( verbose_name='Contenido' )
-    image       =   models.ImageField( default='null', verbose_name='Imagen' )
+    image       =   models.ImageField( default='null', verbose_name='Imagen', upload_to="articles" )
     public      =   models.BooleanField(verbose_name='¿Publicado?')
     user        =   models.ForeignKey( User, verbose_name='Usuario', on_delete=models.CASCADE ) ## Se crea una relacion con otro modelo y se Elimina registro en manera de cascada
     category    =   models.ManyToManyField( Category, verbose_name='Categorias', blank=True ) # Relacion muchos a muchos
@@ -30,6 +30,7 @@ class Article( models.Model ):
     class Meta:
         verbose_name        =   'Artuculo'
         verbose_name_plural =   'Artuculos'
+        ordering            =   ['-created_at']
 
     def __str__(self):
         return self.title

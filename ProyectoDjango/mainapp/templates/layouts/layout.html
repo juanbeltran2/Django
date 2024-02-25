@@ -33,6 +33,18 @@
             <li>
                 <a href="{% url 'index' %}">Inicio</a>
             </li>
+            
+            <li>
+                <a href="{% url 'list_articles' %}">Categorias</a>
+                <ul>                    
+                    {% for category in categories %}
+                        <li>
+                            <a href="{% url 'category' category.0 %}">{{ category.1 }}</a>
+                        </li>   
+                    {% endfor %} 
+                </ul>
+            </li>   
+
             <!-- Recorremos las paginas cargadas desde E:\Cursos\Django\ProyectoDjango\pages\context_processors.py  -->
             {% for page in pages %}
                 <li>
@@ -49,7 +61,7 @@
     </div>
 
     <div id="content">
-
+        
         <div class="box">            
             {% block content %}
                 <!-- Codigo que viene del template -->

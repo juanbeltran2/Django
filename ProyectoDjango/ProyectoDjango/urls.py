@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
 
 ### COnfiguracion inicial antes de mejorar las rutas
 '''
@@ -39,3 +40,8 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('', include('blog.urls')),
 ]
+
+# ruta imagenes
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )

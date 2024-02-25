@@ -1,17 +1,15 @@
-
 {% extends "layouts\layout.html" %}
 
 {% block title %}
-    {{title}}
+    {{category.name}}
 {% endblock %}
 
 {% block content %}
-    <h1>{{title}} </h1>
+    <h1>{{category.name}} </h1>
+    
+    <p>{{ category.description }} <p>
 
     {% comment %} incluimos la subtemplate que esta en ProyectoDjango\blog\templates\articles\list.html {% endcomment %}
-
     {% include 'articles/articles.html' %}
-
-    {% include 'articles/pagination.html' %}
 
 {% endblock %}

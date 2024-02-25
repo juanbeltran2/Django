@@ -115,4 +115,20 @@ Se puede modificar esta vista del admin editando el scrip E:\Cursos\Django\apren
 9. Creo y configuro el fichero ProyectoDjango\blog\urls.py
 10. Cargo la url en el fichero principal ProyectoDjango\ProyectoDjango\urls.py
 11. Modifico el template nuevo ProyectoDjango\blog\templates\articles\list.html
-12. 
+12. Imagenes: configurar MEDIA_URL Y MEDIA_ROOT en ProyectoDjango\ProyectoDjango\settings.py
+13. Imagenes: configurar la ruta de las imagenes en ProyectoDjango\ProyectoDjango\urls.py
+14. Creo ProyectoDjango\blog\processor.py para traer las categorias relacionadas con los articulos por medio de sub-consultas
+15. lo configuro en TEMPLATES de ProyectoDjango\ProyectoDjango\settings.py
+16. lo incluyo en el layout principal
+17. Creamos el template de \blog\templates\categories\category.html
+18. creamos la funcion de category en ProyectoDjango\blog\views.py
+19. creamos la nueva url en ProyectoDjango\blog\urls.py
+20. Modificamos la url a la cual se van a enviar las categorias en ProyectoDjango\mainapp\templates\layouts\layout.html
+21. Creamos el template articles.html para hacer un ciclo reutilizable
+22. Modificamos el error de 404 en ProyectoDjango\blog\views.py importando la libreria y modificando la consulta
+23. Creamos la template de articulos ProyectoDjango\blog\templates\articles\detail.html
+24. Creamos la funcion en la vista ProyectoDjango\blog\views.py
+25. adicionamos la ruta en la url ProyectoDjango\blog\urls.py
+26. Se importa la libreria de paginacion y se configura la funcion en ProyectoDjango\blog\views.py
+27. Se crea ProyectoDjango\blog\templates\articles\pagination.html con el div de la paginacion
+28. Se importa en ProyectoDjango\blog\templates\articles\list.html
